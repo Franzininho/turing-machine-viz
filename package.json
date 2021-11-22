@@ -17,10 +17,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.0.0",
+    "eslint": "^3.19.0",
     "file-loader": "^0.8.5",
     "raw-loader": "^0.5.1",
-    "webpack": "^1.12.9",
+    "webpack": "^1.15.0",
     "webpack-dev-server": "^1.16.5"
   }
 }
