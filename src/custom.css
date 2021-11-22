@@ -1,0 +1,193 @@
+body {
+  font-variant-ligatures: contextual;
+}
+
+nav .navbar-right {
+  margin-right: 0;
+  /* override negative margin  */
+}
+
+.navbar-brand {
+  font-variant: small-caps;
+  letter-spacing: .03em;
+  /* for caps */
+  font-family: 'Avenir Next', 'Avenir', 'Lucida Grande', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.kern {
+  letter-spacing: -.1em;
+  font-kerning: none;
+  /* kern manually */
+}
+
+.navbar-brand .kern-Ma {
+  letter-spacing: 0em
+}
+
+.navbar-brand .kern-Vi {
+  letter-spacing: -.02em
+}
+
+pre {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.editor-shortcuts td:first-child {
+  text-align: right;
+}
+
+kbd {
+  /* Adjusted StackOverflow's old <kbd> style https://meta.superuser.com/questions/4788 */
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 85%;
+  line-height: 1.4;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+@media (min-width: 992px) {
+  /* when diagram and editor are side by side */
+  /* Visually center diagram horiz. (match left and right negative space) */
+  #diagram-column {
+    padding-right: 0;
+  }
+}
+
+/* Editor */
+#editor-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 85ch;
+  margin: auto;
+}
+
+button.tm-editor-revert {
+  position: absolute;
+  right: 0;
+}
+
+.tm-editor.ace_editor {
+  border: 1px solid #DDD;
+  /*border: 1px solid #ccc;*/
+  border-radius: 4px;
+  margin-top: 1em;
+  font-family: 'Source Code Pro', 'source-code-pro', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  text-align: left;
+}
+
+/* Print styles */
+@media print {
+  button.btn,
+  hr {
+    display: none
+  }
+  #tutorial {
+    page-break-before: always
+  }
+}
+
+/* "Save" button */
+.btn-wide-save {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+/* Checkbox table */
+.checkbox-table tr> :first-child {
+  text-align: right
+}
+
+.checkbox-table tr> :last-child {
+  text-align: right;
+}
+
+.checkbox-table tbody tr,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Disclosure triangle */
+a.disclosure-triangle {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.disclosure-triangle:before {
+  content: '▸';
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: transform 0.1s linear;
+  display: inline-block;
+  font-size: larger;
+  margin-right: 0.2em;
+}
+
+a.disclosure-triangle.collapsed:before {
+  transform: none;
+}
+
+a.disclosure-triangle+div.collapse>.panel:first-child,
+a.disclosure-triangle+div.collapsing>.panel:first-child {
+  margin-top: 1em;
+}
+
+
+/* Page footer */
+.octicon.octicon-mark-github {
+  fill: currentColor;
+  overflow: visible;
+}
+
+.page-footer {
+  margin: 2em 0 0 0;
+  padding: 1.1em;
+  border-top: 1px solid #ddd;
+  background: hsl(0, 0%, 96%);
+  text-align: center;
+  line-height: 0;
+  /* to center logo vertically */
+}
+
+.page-footer .octicon {
+  color: hsl(0, 0%, 35%);
+}
+
+.page-footer a .octicon:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+/* Fix overflow inside modal caused by td pre */
+.modal-dialog td pre {
+  white-space: pre-wrap;
+  font-size: smaller;
+}
+
+/* Fix some cases of extra margins in bootstrap */
+.modal-body .panel:last-child,
+.panel-body>*:last-child {
+  margin-bottom: 0;
+}
+
+/* Feature detection */
+.download-attr .download-fallback {
+  display: none
+}
+
+.no-copycommand [data-clipboard-target] {
+  display: none
+}
+
+.icon-help-block>* {
+  display: table-cell
+}
+
+.icon-help-block>.glyphicon:first-child {
+  padding-right: 0.5em
+}

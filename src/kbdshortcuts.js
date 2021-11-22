@@ -84,19 +84,19 @@ function main(commands, table) {
 
 var entries = [
   [
-    { name: 'save', desc: 'Load machine<br> <small>Save changes and load the machine.</small>' }
+    { name: 'save', desc: 'Carregar máquina<br> <small>Salva as alterações e carrega a máquina.</small>' }
   ], [
-    { name: 'togglecomment', desc: 'Toggle comment' },
-    { name: 'indent', desc: 'Indent selection' },
-    { name: 'outdent', desc: 'Unindent selection' }
+    { name: 'togglecomment', desc: 'Alternar comentário' },
+    { name: 'indent', desc: 'Indentar seleção' },
+    { name: 'outdent', desc: 'Recuar seleção' }
   ], [
-    { name: 'movelinesup', desc: 'Move line up' },
-    { name: 'movelinesdown', desc: 'Move line down' },
-    { name: 'duplicateSelection', desc: 'Duplicate line/selection' }
+    { name: 'movelinesup', desc: 'Mover linha para cima' },
+    { name: 'movelinesdown', desc: 'Mover linha para baixo' },
+    { name: 'duplicateSelection', desc: 'Duplicar linha/seleção' }
   ], [
-    { name: 'selectMoreAfter', desc: 'Add next occurrence to selection<br> <small>Like a quick “find”. Useful for renaming things.</small>' },
-    { name: 'find', desc: 'Find' },
-    { name: 'replace', desc: 'Find and Replace' }
+    { name: 'selectMoreAfter', desc: 'Adicionar a próxima ocorrência à seleção<br><small>Como um “achado” rápido. Útil para renomear coisas.</small>' },
+    { name: 'find', desc: 'Procurar' },
+    { name: 'replace', desc: 'Procurar e substituir' }
   ]
 ];
 

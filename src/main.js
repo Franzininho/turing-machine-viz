@@ -50,9 +50,9 @@ function addAlertPane(type, html) {
   var isIEUnder11 = new Function('/*@cc_on return @_jscript_version; @*/')() < 11;
   if (isIEUnder11) {
     addAlertPane('warning',
-      '<p><strong>Your <a href="http://whatbrowser.org" target="_blank">web browser</a> is out of date</strong> and does not support some features used by this program.<br>' +
-      '<em>The page may not work correctly, and data may be lost.</em></p>' +
-      'Please update your browser, or use another browser such as <a href="http://www.google.com/chrome/browser/" target="_blank">Chrome</a> or <a href="http://getfirefox.com" target="_blank">Firefox</a>.');
+      '<p><strong>Seu <a href="http://whatbrowser.org" target="_blank"> browser</a> está desatualizado</strong> e não suporta alguns recursos usados por este programa.<br>' +
+      '<em>A página pode não funcionar corretamente e os dados podem ser perdidos.</em></p>' +
+      'Atualize seu navegador ou use outro navegador, como o <a href="http://www.google.com/chrome/browser/" target="_blank">Chrome</a> ou <a href="http://getfirefox.com" target="_blank">Firefox</a>.');
   }
 
   // Warn about iOS local storage volatility
@@ -61,10 +61,10 @@ function addAlertPane(type, html) {
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
       getId('misc-tips-list').insertAdjacentHTML('afterbegin',
-        '<li><strong class="text-warning">Important note for iOS</strong>: ' +
-        'iOS saves browser local storage in the cache folder, which is <strong>not backed up</strong>, and is ' +
-        '<q cite="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Browser_compatibility"><strong>subject to occasional clean up</strong>, ' +
-        'at the behest of the OS, typically if space is short.</q></li>');
+        '<li><strong class="text-warning">Nota importante para iOS</strong>: ' +
+        'iOS salva o armazenamento local do navegador na pasta de cache, que é <strong>sem backup</strong>, e é ' +
+        '<q cite="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Browser_compatibility"><strong>sujeito a limpeza ocasional</strong>, ' +
+        'a pedido do sistema operacional, normalmente se o espaço for curto.</q></li>');
     }
   });
 }());
@@ -177,16 +177,16 @@ var menu = (function () {
       var isExample = menu.currentDocument.isExample;
       if (wasExample !== isExample) {
         if (!isExample) {
-          renameLink.textContent = 'Rename…';
+          renameLink.textContent = 'Renomear…';
           renameLink.removeEventListener('click', renameExample);
           renameLink.setAttribute('data-toggle', 'modal');
-          deleteLink.textContent = 'Delete…';
+          deleteLink.textContent = 'Excluir…';
           deleteLink.setAttribute('data-target', '#deleteDialog');
         } else {
-          renameLink.textContent = 'Rename a copy…';
+          renameLink.textContent = 'Renomea a copia…';
           renameLink.addEventListener('click', renameExample);
           renameLink.removeAttribute('data-toggle');
-          deleteLink.textContent = 'Reset this example…';
+          deleteLink.textContent = 'Restaurar este exemplo…';
           deleteLink.setAttribute('data-target', '#resetExampleDialog');
         }
         wasExample = isExample;
